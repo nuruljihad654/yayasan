@@ -1,0 +1,454 @@
+/* ============================
+   RESET & BODY
+============================ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ============================
+   NAVBAR
+============================ */
+.navbar {
+  background: #0b6537;
+  padding: 10px 16px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-area { display: flex; align-items: center; gap: 8px; }
+.logo-img { height: 50px; border-radius: 6px; }
+.brand-title { color: #fff; font-weight: 700; font-size: 18px; }
+.brand-sub { font-size: 12px; color: #d9f5e3; }
+
+.nav-links { display: flex; gap: 14px; }
+.nav-links a { color: #fff; font-weight: 600; text-decoration: none; }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+}
+
+/* ============================
+   HERO
+============================ */
+.hero {
+  padding: 40px 0;
+  background: #eef8f1;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.hero-text { flex: 1; }
+
+.hero h1 {
+  font-size: 28px;
+  color: #0b6537;
+}
+
+.hero p { color: #345d4a; margin-top: 6px; }
+
+.hero-cta { display: flex; gap: 12px; margin-top: 14px; }
+
+.hero-image img {
+  width: 150px;
+  border-radius: 8px;
+}
+
+/* ============================
+   BUTTONS
+============================ */
+.btn {
+  padding: 8px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.btn.primary { background: #ffc730; color: #064a2a; }
+.btn.outline { border: 2px solid #0b6537; color: #0b6537; }
+
+/* ============================
+   SECTIONS
+============================ */
+.section {
+  max-width: 1100px;
+  margin: 25px auto;
+  padding: 10px;
+}
+
+.section-header { text-align: center; margin-bottom: 15px; }
+
+/* ============================
+   PROFIL
+============================ */
+.content-card {
+  padding: 22px;
+  background: #fff;
+  border-radius: 10px;
+  margin-top: 18px;
+}
+
+.section-header h2 {
+  font-size: 24px;
+  color: #0b6537;
+  font-weight: 800;
+}
+
+.section-header .lead {
+  font-size: 15px;
+  color: #345d4a;
+  margin-top: 5px;
+  text-align: center !important;
+}
+
+.profil-menu {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.profil-btn {
+  background: #0b6537;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* ============================
+   TEKS PROFIL RAPI
+============================ */
+#profil p {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.78;
+  margin-bottom: 14px;
+  color: #333;
+}
+
+/* ============================
+   VIDEO RESPONSIVE
+============================ */
+.video-wrapper {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16/9;
+  background: #000;
+  margin: 12px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ============================
+   PROGRAM UNGGULAN
+============================ */
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.program-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  transition: .25s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.15);
+}
+
+.program-icon {
+  width: 85px;
+  margin-bottom: 10px;
+}
+
+.program-card h4 { color: #0b6537; font-size: 16px; font-weight: 700; }
+.program-card .arabic { font-size: 16px; direction: rtl; }
+
+/* ============================
+   DROPDOWN MENU PREMIUM
+============================ */
+.dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn { cursor: pointer; }
+
+.dropdown-menu.fancy {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #07c230;
+  border-radius: 10px;
+  min-width: 220px;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  animation: fadeDown 0.25s ease-out;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-item {
+  display: flex;
+  gap: 10px;
+  padding: 12px 16px;
+  font-weight: 600;
+  color: red; /* PERMINTAAN KHUSUS */
+  background: hsl(130, 81%, 48%);
+}
+
+.dropdown-item:hover {
+  background: #17bb09;
+  padding-left: 20px;
+}
+
+.dropdown-icon { width: 23px; }
+
+/* Show on hover */
+.dropdown-wrapper:hover .dropdown-menu { display: flex; }
+
+/* ============================
+   BAGAN STRUKTUR PREMIUM (FINAL)
+============================ */
+.org-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.org-item {
+  background: #fff;
+  padding: 20px 16px;
+  border-radius: 14px;
+  border: 2px solid #0b6537;
+  text-align: center;
+  min-width: 200px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  transition: .3s ease;
+}
+
+.org-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.org-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 4px solid #0b6537;
+  object-fit: cover;
+  box-shadow: 0 0 12px rgba(11,101,55,0.5);
+}
+
+.org-item:hover .org-photo {
+  box-shadow: 0 0 22px rgba(11,101,55,0.9);
+}
+
+.org-item h4 {
+  font-size: 17px;
+  font-weight: 800;
+  color: #0b6537;
+}
+
+.org-item p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Garis */
+.level-1 { display: flex; justify-content: center; }
+
+.org-line-vertical {
+  width: 2px;
+  height: 35px;
+  background: #0b6537;
+  margin: 0 auto;
+}
+
+.level-2 {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
+}
+
+.level-2::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background: #0b6537;
+}
+
+.level-2 .org-item::before {
+  content: "";
+  position: absolute;
+  top: -22px;
+  width: 2px;
+  height: 22px;
+  background: #0b6537;
+  left: 0; right: 0; margin: auto;
+}
+
+@media (max-width: 700px) {
+  .level-2 {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .level-2::before,
+  .level-2 .org-item::before {
+    display: none;
+  }
+}
+
+/* ============================
+   FOOTER
+============================ */
+.footer {
+  background: #0b6537;
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+  margin-top: 40px;
+}
+
+/* Back to Top */
+.back-top {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  background: #ffc730;
+  border-radius: 6px;
+  padding: 10px;
+  display: none;
+}
+
+/* ============================
+   RESPONSIVE MENU
+============================ */
+@media(max-width: 900px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #0b6537;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .nav-toggle { display: block; }
+}
+/* ================================
+   JENJANG PENDIDIKAN (MODERN)
+================================ */
+
+.jenjang-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  margin-top: 15px;
+}
+
+.jenjang-card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  text-align: center;
+  transition: 0.25s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.jenjang-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Icon */
+.jenjang-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+/* Title text */
+.jenjang-card h4 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+/* Description text */
+.jenjang-card p {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Warna Per Jenjang */
+.jenjang-card.tk { border-color: #ffb347; background: #fff6e9; }
+.jenjang-card.mi { border-color: #7fcf6a; background: #eefaea; }
+.jenjang-card.mts { border-color: #5ca8ff; background: #eef5ff; }
+.jenjang-card.ma { border-color: #c78bff; background: #f7efff; }
+
+/* Hover warna lebih pekat */
+.jenjang-card.tk:hover { border-color: #ffa726; }
+.jenjang-card.mi:hover { border-color: #4caf50; }
+.jenjang-card.mts:hover { border-color: #2196f3; }
+.jenjang-card.ma:hover { border-color: #9c27b0; }
